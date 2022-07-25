@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(226, 43%, 10%);
+  max-width: 1440px;
+  height: 100vh;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+main > section {
+  height: 480px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+}
+
+main > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+main > section > div {
+  border-radius: 10px;
+  margin-right: 15px;
+}
+
+main > div > section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: baseline;
+}
+
+main > section > div,
+section > article > div {
+  background-color: hsl(235, 46%, 20%);
+}
+
+main > section > div > div {
+  background-color: hsl(246, 80%, 60%);
+  border-radius: inherit;
+  padding: 15px;
+  padding: 15px;
+  height: 65%;
+}
+
+#work {
+  background-color: hsl(15, 100%, 70%);
+}
+
+#play {
+  background-color: hsl(195, 74%, 62%);
+}
+
+#study {
+  background-color: hsl(348, 100%, 68%);
+}
+
+#exercise {
+  background-color: hsl(145, 58%, 55%);
+}
+
+#social {
+  background-color: hsl(264, 64%, 52%);
+}
+
+#self-care {
+  background-color: hsl(43, 84%, 65%);
+}
+
+article {
+  background-color: hsl(15, 100%, 70%);
+  position: relative;
+  width: 225px;
+  height: 225px;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 15px;
+}
+
+section > article > img {
+  position: absolute;
+  top: -10px;
+  right: 0;
+}
+
+section > article > div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 195px;
+  border-radius: inherit;
+  padding: 15px;
+}
+
+section > div > div > img {
+  width: 25%;
+  border-radius: 50%;
+  border: 3px solid hsl(0, 0%, 100%);
+}
