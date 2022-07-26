@@ -162,10 +162,9 @@ a {
   color: hsl(236, 100%, 87%);
 }
 
-a:active,
 a:hover,
 .active {
-  color: hsl(0, 0%, 100%);
+  color: hsl(0, 0%, 100%)!important;
 }
 
 div > div > span {
