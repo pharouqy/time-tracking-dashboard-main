@@ -54,8 +54,8 @@ function display() {
           case "Self Care":
             const titleSelfCare = document.getElementById("titleSelfCare");
             titleSelfCare.innerText = element.title;
-            currentSelfCare.innerText = `${element.timeframes.monthly.current} hrs`;
-            previousSelfCare.innerText = `Last Week - ${element.timeframes.monthly.previous} hrs`;
+            currentSelfCare.innerText = `${element.timeframes.weekly.current} hrs`;
+            previousSelfCare.innerText = `Last Week - ${element.timeframes.weekly.previous} hrs`;
             break;
         }
       });
@@ -137,7 +137,7 @@ function display() {
                   break;
                 case "Study":
                   currentStudy.innerText = `${element.timeframes.monthly.current} hrs`;
-                  previousStudy.innerText = `Last Month - ${element.timeframes.weekly.previous} hrs`;
+                  previousStudy.innerText = `Last Month - ${element.timeframes.monthly.previous} hrs`;
                   break;
                 case "Exercise":
                   currentExercise.innerText = `${element.timeframes.monthly.current} hrs`;
