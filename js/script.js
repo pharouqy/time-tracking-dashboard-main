@@ -13,8 +13,6 @@ const previousSocial = document.getElementById("previousSocial");
 const previousSelfCare = document.getElementById("previousSelfCare");
 
 display();
-click();
-toggle();
 
 function display() {
   fetch("./data.json")
@@ -27,48 +25,41 @@ function display() {
             const titleWork = document.getElementById("titleWork");
             titleWork.innerText = element.title;
             currentWork.innerText = `${element.timeframes.weekly.current} hrs`;
-            previousWork.innerText = `Last Work - ${element.timeframes.weekly.previous} hrs`;
+            previousWork.innerText = `Last Week - ${element.timeframes.weekly.previous} hrs`;
             break;
           case "Play":
             const titlePlay = document.getElementById("titlePlay");
             titlePlay.innerText = element.title;
             currentPlay.innerText = `${element.timeframes.weekly.current} hrs`;
-            previousPlay.innerText = `Last Work - ${element.timeframes.weekly.previous} hrs`;
+            previousPlay.innerText = `Last Week - ${element.timeframes.weekly.previous} hrs`;
             break;
           case "Study":
             const titleStudy = document.getElementById("titleStudy");
             titleStudy.innerText = element.title;
             currentStudy.innerText = `${element.timeframes.weekly.current} hrs`;
-            previousStudy.innerText = `Last Work - ${element.timeframes.weekly.previous} hrs`;
+            previousStudy.innerText = `Last Week - ${element.timeframes.weekly.previous} hrs`;
             break;
           case "Exercise":
             const titleExercise = document.getElementById("titleExercise");
             titleExercise.innerText = element.title;
             currentExercise.innerText = `${element.timeframes.weekly.current} hrs`;
-            previousExercise.innerText = `Last Work - ${element.timeframes.weekly.previous} hrs`;
+            previousExercise.innerText = `Last Week - ${element.timeframes.weekly.previous} hrs`;
             break;
           case "Social":
             const titleSocial = document.getElementById("titleSocial");
             titleSocial.innerText = element.title;
             currentSocial.innerText = `${element.timeframes.weekly.current} hrs`;
-            previousSocial.innerText = `Last Work - ${element.timeframes.weekly.previous}hrs`;
+            previousSocial.innerText = `Last Week - ${element.timeframes.weekly.previous}hrs`;
             break;
           case "Self Care":
             const titleSelfCare = document.getElementById("titleSelfCare");
             titleSelfCare.innerText = element.title;
             currentSelfCare.innerText = `${element.timeframes.monthly.current} hrs`;
-            previousSelfCare.innerText = `Last Work - ${element.timeframes.monthly.previous} hrs`;
+            previousSelfCare.innerText = `Last Week - ${element.timeframes.monthly.previous} hrs`;
             break;
         }
       });
-    })
-    .catch((error) => console.error(error));
-}
 
-function click(value) {
-  fetch("./data.json")
-    .then((response) => response.json())
-    .then((data) => {
       data.forEach((element) => {
         for (let i = 0; i < link.length; i++) {
           link[i].addEventListener("click", function (e) {
@@ -82,27 +73,27 @@ function click(value) {
               switch (element.title) {
                 case "Work":
                   currentWork.innerText = `${element.timeframes.daily.current} hrs`;
-                  previousWork.innerText = `Last Work - ${element.timeframes.daily.previous} hrs`;
+                  previousWork.innerText = `Last Day - ${element.timeframes.daily.previous} hrs`;
                   break;
                 case "Play":
                   currentPlay.innerText = `${element.timeframes.daily.current} hrs`;
-                  previousPlay.innerText = `Last Work - ${element.timeframes.daily.previous} hrs`;
+                  previousPlay.innerText = `Last Day - ${element.timeframes.daily.previous} hrs`;
                   break;
                 case "Study":
                   currentStudy.innerText = `${element.timeframes.daily.current} hrs`;
-                  previousStudy.innerText = `Last Work - ${element.timeframes.daily.previous} hrs`;
+                  previousStudy.innerText = `Last Day - ${element.timeframes.daily.previous} hrs`;
                   break;
                 case "Exercise":
                   currentExercise.innerText = `${element.timeframes.daily.current} hrs`;
-                  previousExercise.innerText = `Last Work - ${element.timeframes.daily.previous} hrs`;
+                  previousExercise.innerText = `Last Day - ${element.timeframes.daily.previous} hrs`;
                   break;
                 case "Social":
                   currentSocial.innerText = `${element.timeframes.daily.current} hrs`;
-                  previousSocial.innerText = `Last Work - ${element.timeframes.daily.previous} hrs`;
+                  previousSocial.innerText = `Last Day - ${element.timeframes.daily.previous} hrs`;
                   break;
                 case "Self Care":
                   currentSelfCare.innerText = `${element.timeframes.daily.current} hrs`;
-                  previousSelfCare.innerText = `Last Work - ${element.timeframes.daily.previous} hrs`;
+                  previousSelfCare.innerText = `Last Day - ${element.timeframes.daily.previous} hrs`;
                   break;
               }
             }
@@ -110,27 +101,27 @@ function click(value) {
               switch (element.title) {
                 case "Work":
                   currentWork.innerText = `${element.timeframes.weekly.current} hrs`;
-                  previousWork.innerText = `Last Work - ${element.timeframes.weekly.previous} hrs`;
+                  previousWork.innerText = `Last Week - ${element.timeframes.weekly.previous} hrs`;
                   break;
                 case "Play":
                   currentPlay.innerText = `${element.timeframes.weekly.current} hrs`;
-                  previousPlay.innerText = `Last Work - ${element.timeframes.weekly.previous}hrs`;
+                  previousPlay.innerText = `Last Week - ${element.timeframes.weekly.previous}hrs`;
                   break;
                 case "Study":
                   currentStudy.innerText = `${element.timeframes.weekly.current} hrs`;
-                  previousStudy.innerText = `Last Work - ${element.timeframes.weekly.previous} hrs`;
+                  previousStudy.innerText = `Last Week - ${element.timeframes.weekly.previous} hrs`;
                   break;
                 case "Exercise":
                   currentExercise.innerText = `${element.timeframes.weekly.current} hrs`;
-                  previousExercise.innerText = `Last Work - ${element.timeframes.weekly.previous}hrs`;
+                  previousExercise.innerText = `Last Week - ${element.timeframes.weekly.previous}hrs`;
                   break;
                 case "Social":
                   currentSocial.innerText = `${element.timeframes.weekly.current} hrs`;
-                  previousSocial.innerText = `Last Work - ${element.timeframes.weekly.previous}hrs`;
+                  previousSocial.innerText = `Last Week - ${element.timeframes.weekly.previous}hrs`;
                   break;
                 case "Self Care":
                   currentSelfCare.innerText = `${element.timeframes.weekly.current} hrs`;
-                  previousSelfCare.innerText = `Last Work - ${element.timeframes.weekly.previous}hrs`;
+                  previousSelfCare.innerText = `Last Week - ${element.timeframes.weekly.previous}hrs`;
                   break;
               }
             }
@@ -138,23 +129,23 @@ function click(value) {
               switch (element.title) {
                 case "Work":
                   currentWork.innerText = `${element.timeframes.monthly.current} hrs`;
-                  previousWork.innerText = `Last Work - ${element.timeframes.monthly.previous} hrs`;
+                  previousWork.innerText = `Last Month - ${element.timeframes.monthly.previous} hrs`;
                   break;
                 case "Play":
                   currentPlay.innerText = `${element.timeframes.monthly.current} hrs`;
-                  previousPlay.innerText = `Last Work - ${element.timeframes.monthly.previous} hrs`;
+                  previousPlay.innerText = `Last Month - ${element.timeframes.monthly.previous} hrs`;
                   break;
                 case "Study":
                   currentStudy.innerText = `${element.timeframes.monthly.current} hrs`;
-                  previousStudy.innerText = `Last Work - ${element.timeframes.weekly.previous} hrs`;
+                  previousStudy.innerText = `Last Month - ${element.timeframes.weekly.previous} hrs`;
                   break;
                 case "Exercise":
                   currentExercise.innerText = `${element.timeframes.monthly.current} hrs`;
-                  previousExercise.innerText = `Last Work - ${element.timeframes.monthly.previous}hrs`;
+                  previousExercise.innerText = `Last Month - ${element.timeframes.monthly.previous}hrs`;
                   break;
                 case "Social":
                   currentSocial.innerText = `${element.timeframes.monthly.current} hrs`;
-                  previousSocial.innerText = `Last Work - ${element.timeframes.monthly.previous} hrs`;
+                  previousSocial.innerText = `Last Month- ${element.timeframes.monthly.previous} hrs`;
                   break;
                 case "Self Care":
                   break;
@@ -166,10 +157,3 @@ function click(value) {
     })
     .catch((error) => console.error(error));
 }
-
-/*function toggle() {
-  const active = document.querySelectorAll(".active"); // get all active
-  active.forEach((element) => {
-    element.classList.toggle("active"); // remove active class
-  });
-}*/
