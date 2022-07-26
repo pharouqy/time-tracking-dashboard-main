@@ -58,9 +58,6 @@ function display() {
             previousSelfCare.innerText = `Last Week - ${element.timeframes.weekly.previous} hrs`;
             break;
         }
-      });
-
-      data.forEach((element) => {
         for (let i = 0; i < link.length; i++) {
           link[i].addEventListener("click", function (e) {
             e.preventDefault();
