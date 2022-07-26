@@ -148,6 +148,8 @@ function display() {
                   previousSocial.innerText = `Last Month- ${element.timeframes.monthly.previous} hrs`;
                   break;
                 case "Self Care":
+                  currentSelfCare.innerText = `${element.timeframes.monthly.current} hrs`;
+                  previousSelfCare.innerText = `Last Month - ${element.timeframes.monthly.previous} hrs`;
                   break;
               }
             }
